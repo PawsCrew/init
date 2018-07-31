@@ -7,7 +7,7 @@ function download()
 {
     local init_path="${1}"
     local retry_count_down=30
-      while ! curl --silent -o ${init_path} "https://raw.githubusercontent.com/einyx/${PLAYBOOK}/${BS_BRANCH:-master}/${init_path}" && [ ${retry_count_down} -gt 0 ] ; do
+      while ! curl --silent -o ${init_path} "https://raw.githubusercontent.com/PawsCrew/${PLAYBOOK}/${BS_BRANCH:-master}/${init_path}" && [ ${retry_count_down} -gt 0 ] ; do
         retry_count_down=$((retry_count_down - 1))
     done
 }
